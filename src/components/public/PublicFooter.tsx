@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function PublicFooter({ immersive = false }: { immersive?: boolean }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <footer
       className={`${immersive ? "border-t border-slate-700/70 bg-slate-950/90 backdrop-blur-xl" : "bg-slate-950"} text-slate-300`}
@@ -9,7 +11,13 @@ export function PublicFooter({ immersive = false }: { immersive?: boolean }) {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <Image alt="" className="size-12 object-contain" height={48} src="/aquaponics-logo.png" width={48} />
+            <Image
+              alt=""
+              className="size-12 object-contain"
+              height={48}
+              src={`${basePath}/aquaponics-logo.png`}
+              width={48}
+            />
             <div>
               <p className="font-semibold text-white">Smart Aquaponics</p>
               <p className="text-xs uppercase tracking-[0.12em] text-emerald-300">Capstone project</p>

@@ -1599,3 +1599,12 @@ Nested grower-system paths under both `user/{uid}` and `users/{uid}`:
   4. Confirm blank/invalid fields, duplicate email, signed-out access, inactive/non-admin access, self-delete, and admin-target delete are rejected.
   5. Add disposable nested system/history records, type `DELETE`, and confirm Auth/profile/nested data are removed while issue reports and global alerts remain.
   6. Confirm Cancel/Escape never writes, and a wrong confirmation value cannot enable deletion.
+
+## GitHub Pages Deployment (2026-07-21)
+
+- GitHub Pages is the selected hosting target for the shareable capstone website URL: `https://just-andrei.github.io/aquaponics-next-admin/`.
+- `next.config.ts` now uses Next.js static export output, the Pages-provided build-time base path, trailing-slash routes, and unoptimized static images for compatibility with project-site hosting.
+- The server-style dynamic grower route was replaced with the static `/admin/growers/details/?growerUid=...` route so arbitrary existing grower UIDs remain usable without a Next.js server.
+- `.github/workflows/deploy-pages.yml` builds and deploys `out/` on pushes to `main`; Firebase web configuration is supplied through the six existing `NEXT_PUBLIC_FIREBASE_*` repository secrets and `.env.local` remains uncommitted.
+- The GitHub repository must be public and named `aquaponics-next-admin` for the requested project-site URL. Firebase Authentication must allow `just-andrei.github.io` before admin sign-in is accepted from the deployed site.
+- Local verification passed with `npm run lint` and a clean `PAGES_BASE_PATH=/aquaponics-next-admin npm run build`; all 12 generated pages are static and the exported HTML uses the required Pages asset prefix.

@@ -315,7 +315,10 @@ export function GrowerList() {
                       <div className="flex items-center gap-2">
                         <Link
                           className="inline-flex rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-800 shadow-sm hover:border-emerald-300 hover:bg-emerald-100"
-                          href={`/admin/growers/${encodeURIComponent(grower.uid)}`}
+                          href={{
+                            pathname: "/admin/growers/details",
+                            query: { growerUid: grower.uid },
+                          }}
                         >
                           View details
                         </Link>
