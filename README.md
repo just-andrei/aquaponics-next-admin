@@ -35,4 +35,4 @@ The production website is published through GitHub Pages:
 
 <https://just-andrei.github.io/aquaponics-next-admin/>
 
-Pushes to `main` run `.github/workflows/deploy-pages.yml`, build a static Next.js export, and deploy the generated `out` directory. The six `NEXT_PUBLIC_FIREBASE_*` values must remain configured as GitHub Actions repository secrets.
+The production files are generated with `PAGES_BASE_PATH=/aquaponics-next-admin npm run build` and published from the `gh-pages` branch. Keep `.env.local` uncommitted when rebuilding the static export.
