@@ -1,0 +1,2 @@
+:HL["/aquaponics-next-admin/_next/static/chunks/0hc68gjl2wmed.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"messages","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"c8VKGuP5g7a0JdVjZKuqr"}

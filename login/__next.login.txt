@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[2594,["/aquaponics-next-admin/_next/static/chunks/05-c3ty_6dwfk.js","/aquaponics-next-admin/_next/static/chunks/14mrh2-p_w84d.js","/aquaponics-next-admin/_next/static/chunks/2yn7b9jcy7mlc.js","/aquaponics-next-admin/_next/static/chunks/2e93y-i5l7i0-.js"],"AuthProvider"]
+3:I[39756,["/aquaponics-next-admin/_next/static/chunks/05-c3ty_6dwfk.js","/aquaponics-next-admin/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+4:I[37457,["/aquaponics-next-admin/_next/static/chunks/05-c3ty_6dwfk.js","/aquaponics-next-admin/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+0:{"rsc":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/aquaponics-next-admin/_next/static/chunks/2yn7b9jcy7mlc.js","async":true}],["$","script","script-1",{"src":"/aquaponics-next-admin/_next/static/chunks/2e93y-i5l7i0-.js","async":true}]],["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"c8VKGuP5g7a0JdVjZKuqr"}
