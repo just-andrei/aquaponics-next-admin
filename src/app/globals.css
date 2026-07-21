@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --page-background: #f8fafc;
+  --page-foreground: #0f172a;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--page-background);
+  color: var(--page-foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-theme="dark"] body {
+  --page-background: #020617;
+  --page-foreground: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.public-site {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.public-site :is(button, a, input, select, textarea) {
+  transition-duration: 150ms;
+  transition-property: color, background-color, border-color, box-shadow, opacity,
+    transform;
+}
+
+.public-site button:not(:disabled) {
+  cursor: pointer;
+}
+
+.public-site ::selection {
+  background: rgb(204 251 241);
+  color: rgb(19 78 74);
+}
+
+.public-water-fallback {
+  background:
+    radial-gradient(circle at 20% 20%, rgb(0 189 235 / 40%), transparent 34%),
+    radial-gradient(circle at 80% 35%, rgb(0 168 132 / 36%), transparent 32%),
+    radial-gradient(circle at 55% 85%, rgb(37 99 235 / 34%), transparent 36%),
+    #effcff;
+}
+
+[data-theme="dark"] .public-water-fallback {
+  background:
+    radial-gradient(circle at 20% 20%, rgb(6 182 212 / 46%), transparent 34%),
+    radial-gradient(circle at 80% 35%, rgb(20 184 166 / 40%), transparent 32%),
+    radial-gradient(circle at 55% 85%, rgb(2 132 199 / 42%), transparent 36%),
+    #020617;
+}
+
+.admin-shell {
+  background:
+    radial-gradient(circle at 85% 0%, rgb(207 250 254 / 32%), transparent 28rem),
+    #f8fafc;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.admin-shell :is(button, a, input, select, textarea) {
+  transition-duration: 150ms;
+  transition-property: color, background-color, border-color, box-shadow, opacity,
+    transform;
+}
+
+.admin-shell :is(input, select, textarea):focus-visible {
+  outline: none;
+}
+
+.admin-shell :is(button, a):focus-visible {
+  outline: 2px solid rgb(13 148 136 / 55%);
+  outline-offset: 2px;
+}
+
+.admin-shell button:not(:disabled) {
+  cursor: pointer;
+}
+
+.admin-shell ::selection {
+  background: rgb(204 251 241);
+  color: rgb(19 78 74);
+}
